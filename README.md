@@ -34,5 +34,5 @@ You can call it online file transfer software.A convenient file transfer tool fo
 
 ​	5. Open a browser at http://localhost
 
-![](.\resource\17700510357229.png)
+![](./resource/17700510357229.png)
 
