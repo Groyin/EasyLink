@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+:root{
+    --width:min(600px,100vw);
+}
+.a1{
+    width: var(--width);
+    margin-left:calc((100vw - var(--width))/2);
+}
+#z1{float: right;border: 1px solid #0086ff;border-radius: 3px;padding: 2px 5px;cursor: pointer;color: #0086ff;}
+.a2{
+    font-size: 23px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.a3{
+    margin: 20px 0;
+    padding: 10px 20px;
+    resize: none;
+    width: calc(100% - 40px);
+    height: 70px;
+    border:0;
+    outline:none;
+    box-shadow: none;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    font-family: inherit;
+}
+#z2{
+    border: 1px solid #00cc4c;
+    border-radius: 3px;
+    padding: 2px 5px;
+    cursor: pointer;
+    color: #00cc4c;
+    display: inline;
+    font-size: 15px;
+}
+.a4{
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 10px;
+}
+</style>
+<body>
+    <div class="a1">
+        <div id="z1">
+            退出
+        </div>
+
+        <div class="a2">
+            反馈
+        </div>
+        <textarea class="a3" id="z3" onkeydown="checkEnter(event)"></textarea>
+        <div id="z2">提交</div>
+        <div class="a4">
+            <text style="margin-right: 10px;">请在100字以内</text>
+            <text>当前字数：</text>
+            <text id="z4">0</text>
+            
+        </div>
+
+          
+    </div>
+
+
+</body>
+<script>
+let z1=document.getElementById('z1')
+let z2=document.getElementById('z2')
+let z3=document.getElementById('z3')
+let z4=document.getElementById('z4')
+z1.onclick=function(){
+    window.close()
+}
+z3.oninput=function(){
+    z4.innerText=z3.value.length
+}
+function checkEnter(e) {
+  var et = e || window.event;
+  var keycode = et.charCode || et.keyCode;
+  if (keycode == 13) {
+    if (window.event) {
+      window.event.returnValue = false;
+    } else {
+      e.preventDefault(); //for firefox
+    }
+  }
+}
+z2.onclick=function(){
+    let text=z3.value
+    if(text.length<=0 || text.length>100){
+        alert('字数不符合要求')
+    }
+    else{
+        z3.value=''
+        z4.innerText=0
+        alert('您的反馈已送达')
+    }
+}
+</script>
+</html>

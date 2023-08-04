@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+:root{
+    --width:min(850px,100vw);
+}
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.a1{
+    line-height: 25px;
+    width: var(--width);
+    
+    margin-left:calc((100vw - var(--width))/2);
+    overflow: auto;
+}
+.a2{font-size: 23px;font-weight: 600;margin: 10px 0;}
+.a3{
+    font-weight: 600;
+    font-size: 18px;
+    margin: 15px 0;
+}
+.a4{
+    margin: 10px 0;
+}
+#z1{float: right;border: 1px solid #0086ff;border-radius: 3px;padding: 2px 5px;cursor: pointer;color: #0086ff;}
+</style>
+<body>
+    <div class="a1">
+        <div id="z1">
+        退出
+        </div>
+        
+        <div class="a2">介绍与帮助</div>
+        <div>
+            <div class="a3">平台介绍</div>
+            <div>
+                <div class="a4">
+                    在线文件资源共享平台，用户仅需打开网页即可实现多人多设备文件共享和通信。平台可容纳2至10个设备的实时文件共享、实时通信、更新头像用户名等功能。轻量、方便、快捷。
+                </div>
+            </div>
+            <div class="a3">使用说明</div>
+            <div>
+                <div class="a4">
+                    1.如果你需要创建房间，你可以选择房间号、选择是否设置房间密码、更改容纳数目，点击创建后页面会跳转到房间，创建成功！如果房间设置有误，则无法创建。
+                </div>
+                <div class="a4">
+                    2.如果你需要加入已有的房间，你只需要输入房间号和密码即可。
+                </div>
+                <div class="a4">
+                    3.房间内你可以在左侧界面发送信息与文件，点击文件即下载；右侧界面可以查看全部文件、查看房间所有用户、查看个人信息和房间信息，并可修改。
+                </div>
+                <div class="a4">
+                    4.关闭页面即退出房间
+                </div>
+            </div>
+            <div class="a3">注意</div>
+            <div>
+                <div class="a4">
+                    1.创建房间：最多更改5次房间号，房间人数下限为2上限为10
+                </div>
+                <div class="a4">
+                    2.加入房间：密码错误会禁用请求3秒，房间人满会禁用请求5秒
+                </div>
+                <div class="a4">
+                    3.进入房间后：
+                </div>
+                <div>
+                    <div class="a4">
+                        1）房间url为一次性连接，请勿返回或刷新页面。房间找不到后需要重新在首页申请连接。
+                    </div>
+                    <div class="a4">
+                        2）点击左上角绿（红）按钮即可刷新连接状态
+                    </div>
+                    <div class="a4">
+                        3）如果断线则可能为以下情况
+                    </div>
+                    <div class="a4">
+                        <table style="border:1px solid #dcdfe6 ">
+                            
+                            <tr >
+                            <th>原因</th>
+                            <th>解决方法</th>
+                            </tr>
+                            <tr style="border-top:1px solid #dcdfe6 ">
+                            <td>客户端断网</td>
+                            <td>退出重进</td>
+                            
+                            </tr>
+                            <tr style="border-top:1px solid #dcdfe6 ">
+                            <td>服务端异常</td>
+                            <td>会自动重连，可等待5秒</td>
+                            </tr>
+                            <tr style="border-top:1px solid #dcdfe6 ">
+                                <td>房主退出，房间彻底关闭</td>
+                                <td>无法解决</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="a4">
+                        4）点击文件会自动下载
+                    </div>
+                    <div class="a4">
+                        5）房主离开则房间自动关闭，消息可查看但文件无法下载
+                    </div>
+                    <div class="a4">
+                        6）可以一次性上传多个文件，有大文件（100 MB以上）的上传与下载需要等待时间请耐心，在测试中每100 MB需要1至2秒，具体时间则取决于网速、浏览器等条件
+                    </div>
+                    <div class="a4">
+                        7）用户可以修改头像、名字，会实时更新
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        
+
+
+    </div>
+    
+</body>
+<script>
+z1.onclick=function(){
+    window.close()
+}
+</script>
+</html>
